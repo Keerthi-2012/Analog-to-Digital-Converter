@@ -10,7 +10,7 @@ The PCM conversion process consists of three sequential stages:
 - **Purpose**: Converts continuous analog signals into discrete-time signals
 - **Implementation**: Sample and hold circuit with oscillating clock
 - **Key Components**:
-  - Inverter-based oscillating clock circuit
+  - Ring Oscillator based clock circuit
   - Frequency determined by: f = 1/(2NTd)
     - N = number of inverters
     - Td = propagation time of an inverter
@@ -40,7 +40,7 @@ The PCM conversion process consists of three sequential stages:
 
 ## Hardware Requirements
 - Breadboard
-- Arduino board (Uno/Nano recommended)
+- Arduino board (Uno)
 - Operational amplifiers
 - Inverters (for clock circuit)
 - MOSFETs
@@ -56,9 +56,10 @@ The PCM conversion process consists of three sequential stages:
 - Serial monitor or terminal program
 
 ## Circuit Diagrams
-1. **Sampling Circuit**: Oscillating clock with inverters and MOSFETs
+1. **Sampling Circuit**: Op-amps buffers along with a PMOS acting like a switch 
 2. **Quantization Circuit**: Op-amp comparators with voltage dividers
 3. **Level Selection**: Switch-based selection for quantization resolution
+4. **Clock Circuit** :  Timer circuit built with Hex inverters 
 
 ## Setup Instructions
 1. Assemble the sampling circuit on the breadboard
